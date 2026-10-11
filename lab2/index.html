@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛЮМЕНАР - каталог курсов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Общее меню сайта -->
+    <header>
+        <a href="index.html">ЛЮМЕНАР</a>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="#catalog">Каталог курсов</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="results.html">Результаты обучения</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Учись новому в своём темпе</h1>
+            <p>Курсы для первых шагов в программировании и создании сайтов.</p>
+            <a href="#catalog">Выбрать курс</a>
+        </section>
+
+        <!-- ссылки с #catalog ведут к этому разделу -->
+        <section id="catalog">
+            <h2>Все курсы</h2>
+            <div class="courses">
+                <article class="course-card">
+                    <img src="images/course-html.png" alt="Обложка курса 'Основы HTML'" width="160">
+                    <h3>Основы HTML</h3>
+                    <p>Научись создавать структуру веб-страниц: заголовки, списки, ссылки и таблицы.</p>
+                    <p>Преподаватель: Анна Смирнова</p>
+                    <p>Для начинающих - 10 уроков</p>
+                    <a href="course.html">Подробнее о курсе</a>
+                </article>
+
+                <!-- для этих курсов пока что нет страниц, поэтому вместо ссылки здесь текст -->
+                <article class="course-card">
+                    <img src="images/course-css.png" alt="Обложка курса 'Основы CSS'" width="160">
+                    <h3>Основы CSS</h3>
+                    <p>Разберись с цветами, шрифтами и расположением элементов на странице.</p>
+                    <p>Преподаватель: Иван Петров</p>
+                    <p>Для начинающих - 12 уроков</p>
+                    <span>Скоро</span>
+                </article>
+
+                <article class="course-card">
+                    <img src="images/course-python.png" alt="Обложка курса 'Первые шаги в Python'" width="160">
+                    <h3>Первые шаги в Python</h3>
+                    <p>Познакомься с переменными, условиями и циклами и напиши первую программу.</p>
+                    <p>Преподаватель: Мария Иванова</p>
+                    <p>Для начинающих - 15 уроков</p>
+                    <span>Скоро</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Как проходит обучение</h2>
+            <ol>
+                <li>Изучай теорию в уроках.</li>
+                <li>Выполняй практические задания.</li>
+                <li>Следи за своими результатами.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>ЛЮМЕНАР - 2026</p>
+        <p>Учебный проект по дисциплине "Web-программирование".</p>
+    </footer>
+</body>
+</html>
