@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛЮМЕНАР - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/application.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo" href="index.html">ЛЮМЕНАР</a>
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul>
+                <li><a href="index.html#catalog">Каталог курсов</a></li>
+                <li><a aria-current="page" href="profile.html">Личный кабинет</a></li>
+                <li><a href="results.html">Результаты обучения</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Личный кабинет</h1>
+        <p>Пример профиля ученика.</p>
+
+        <div class="profile">
+            <section class="panel profile__about">
+                <h2>Мой профиль</h2>
+                <img src="images/student.png" alt="Аватар ученика Александры" width="160">
+                <p><strong>Имя:</strong> Александра</p>
+                <p>Изучаю веб-разработку и хочу создать свой первый сайт.</p>
+                <h3>Учебные интересы</h3>
+                <ul>
+                    <li>Создание сайтов</li>
+                    <li>HTML и CSS</li>
+                    <li>Программирование на Python</li>
+                </ul>
+            </section>
+
+            <section class="panel profile__courses">
+                <h2>Мои курсы</h2>
+                <article class="course-card">
+                    <h3><a href="course.html">Основы HTML</a></h3>
+                    <p>Преподаватель: Анна Смирнова</p>
+                    <!-- for у подписи совпадает с id полосы прогресса -->
+                    <p><label for="html-progress">Пройдено 0 из 10 уроков</label></p>
+                    <!-- value это пройденные уроки, max их общее число -->
+                    <progress id="html-progress" value="0" max="10">0 из 10</progress>
+                    <p>Следующий урок: "Знакомство с HTML".</p>
+                    <a class="button" href="lesson.html">Начать обучение</a>
+                </article>
+            </section>
+
+            <section class="panel profile__results">
+                <h2>Мои результаты</h2>
+                <p>Здесь можно посмотреть статистику по курсам и достижения.</p>
+                <a class="button" href="results.html">Посмотреть результаты</a>
+            </section>
+
+            <section class="panel profile__application">
+                <h2>Записаться на курс</h2>
+                <p>Оставь заявку на обучение. Все поля обязательны.</p>
+                <form class="application" id="application-form" action="/api/applications" method="post">
+                    <label class="application__field" for="student-name">Имя
+                        <input id="student-name" name="name" type="text" autocomplete="given-name" required minlength="2" maxlength="80">
+                    </label>
+                    <label class="application__field" for="student-email">Электронная почта
+                        <input id="student-email" name="email" type="email" autocomplete="email" required maxlength="120">
+                    </label>
+                    <label class="application__field" for="selected-course">Курс
+                        <select id="selected-course" name="course" required>
+                            <option value="">Выбери курс</option>
+                            <option value="html">Основы HTML</option>
+                            <option value="css">Основы CSS (лист ожидания)</option>
+                            <option value="python">Первые шаги в Python (лист ожидания)</option>
+                        </select>
+                    </label>
+                    <label class="application__consent" for="student-consent">
+                        <input id="student-consent" name="consent" type="checkbox" required>
+                        Согласен на обработку данных этой заявки
+                    </label>
+                    <button class="button" type="submit">Отправить заявку</button>
+                    <p class="application__status" id="application-status" role="status" aria-live="polite"></p>
+                </form>
+                <noscript>Для отправки заявки включи JavaScript в браузере.</noscript>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>ЛЮМЕНАР - 2026</p>
+        <p>Учебный проект по дисциплине "Web-программирование".</p>
+    </footer>
+</body>
+</html>

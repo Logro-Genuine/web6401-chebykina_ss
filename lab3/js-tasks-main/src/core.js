@@ -6,8 +6,7 @@ function isInteger(n) {
     if (typeof n !== 'number') {
         return false;
     }
-    const fraction = n % 1;
-    return (fraction | 0) === fraction;
+    return (n | 0) === n;
 }
 
 /**
